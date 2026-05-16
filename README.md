@@ -4,3 +4,5 @@ the board used is "https://www.ram-e-shop.com/shop/kit-esp8266-uno-wifi-wifi-ard
 its a combination of 2 boards an arduino and an esp
 the api is grapped from thingspeak.com the write data is used in the proposal.ino
 and the read is used in the script.js
+
+thats basically it just make sure to change the write file into your actually write api, the feild with your feild ID, the wifi SSID and password. and make sure to also change the READ api of things speak or you are gonna basically show my data

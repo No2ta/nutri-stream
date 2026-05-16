@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>Nutri-Stream</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="everything" id="slider">
+
+  <div class="home">
+    <div style="text-align:center; max-width: 400px;">
+      <h1 style="font-size: 48px; margin-bottom: 15px; letter-spacing: -1px;">Nutri-Stream</h1>
+      <div style="width: 60px; height: 4px; background: #f1f0cc; margin: 0 auto 20px auto; border-radius: 2px;"></div>
+      <p style="color:#a09870; font-size: 16px; line-height: 1.6;">
+        Automated hydroponic nutrient monitoring system
+      </p>
+      <div style="margin-top: px; color: #666; font-size: 14px;">
+        <i class="fa-solid fa-arrow-right"></i> hint : Swipe!
+      </div>
+    </div>
+  </div>
+
+  <div class="home">
+    <div class="slide-label"><i class="fa-solid fa-temperature-half"></i> Temperature</div>
+    <div class="valuess" id="valTemp">--</div>
+    <div class="card"><canvas id="cTemp"></canvas></div>
+  </div>
+
+  <div class="home">
+    <div class="slide-label"><i class="fa-solid fa-droplet"></i> Humidity</div>
+    <div class="valuess" id="valHum">--</div>
+    <div class="card"><canvas id="cHum"></canvas></div>
+  </div>
+
+  <div class="home">
+    <div class="slide-label"><i class="fa-solid fa-sun"></i> Light</div>
+    <div class="valuess" id="valLux">--</div>
+    <div class="card"><canvas id="cLux"></canvas></div>
+  </div>
+
+  <div class="home">
+    <div class="slide-label"><i class="fa-solid fa-flask"></i> Nutrient TDS</div>
+    <div class="valuess" id="valTDS">--</div>
+    <div class="card"><canvas id="cTDS"></canvas></div>
+  </div>
+
+  <div class="home">
+    <div class="slide-label" style="margin-bottom:30px;"><i class="fa-solid fa-gear"></i> System Relays</div>
+    <div class="actuator-grid">
+
+      <div class="relay-box">
+        <i class="fa-solid fa-fire" style="font-size:30px;"></i>
+        <div>Heater</div>
+        <div class="tog" id="togH"><div class="tog-knob"></div></div>
+        <div class="relay-state is-off" id="lblH">OFF</div>
+      </div>
+
+      <div class="relay-box">
+        <i class="fa-solid fa-fan" style="font-size:30px;"></i>
+        <div>Fans</div>
+        <div class="tog" id="togF"><div class="tog-knob"></div></div>
+        <div class="relay-state is-off" id="lblF">OFF</div>
+      </div>
+
+      <div class="relay-box">
+        <i class="fa-solid fa-cloud-rain" style="font-size:30px;"></i>
+        <div>Humidifier</div>
+        <div class="tog" id="togM"><div class="tog-knob"></div></div>
+        <div class="relay-state is-off" id="lblM">OFF</div>
+      </div>
+
+      <div class="relay-box">
+        <i class="fa-solid fa-faucet-drip" style="font-size:30px;"></i>
+        <div>Valve</div>
+        <div class="tog" id="togV"><div class="tog-knob"></div></div>
+        <div class="relay-state is-off" id="lblV">OFF</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<button class="nav-btn prev-btn" id="left"><i class="fa-solid fa-chevron-left"></i></button>
+<button class="nav-btn next-btn" id="right"><i class="fa-solid fa-chevron-right"></i></button>
+<script src="script.js"></script>
+
+</body>
+</html>
